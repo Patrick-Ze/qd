@@ -12,6 +12,8 @@ services:
       - "8923:80"
     volumes:
       - "./config:/usr/src/app/config"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       # - QD_DEBUG=False
       # - BIND=0.0.0.0
